@@ -23,6 +23,9 @@
   box-sizing: border-box; }
 
 html {
+  scroll-behavior: smooth; }
+
+html {
   width: 100%; }
   html body {
     font-family: FiraSans-Regular !important;
