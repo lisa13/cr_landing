@@ -29,13 +29,14 @@ html {
     width: inherit; }
 
 header {
-  position: absolute;
-  height: 120px;
+  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 3; }
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.8);
+  height: 70px; }
   header .logo {
     margin-left: 40px;
     width: 100px;
@@ -234,7 +235,7 @@ header {
       text-align: center;
       margin-bottom: 51px;
       max-width: 800px; }
-    .developers-community .container button {
+    .developers-community .container a {
       width: 228px;
       height: 55px;
       background: #00d7b5;
@@ -243,7 +244,10 @@ header {
       line-height: 40px;
       color: #fff;
       border: none;
-      cursor: pointer; }
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
 
 .technology {
   width: 100%;
