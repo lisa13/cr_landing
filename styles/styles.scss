@@ -9,16 +9,35 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: FiraSans-Regular !important;
+html {
   width: 100%;
+
+  body {
+    font-family: FiraSans-Regular !important;
+    width: inherit;
+  }
 }
 
 .main-background {
-  background: url("../images/background.jpg") no-repeat;
-  width: 100%;
+  
   height: 900px;
+
+  
 }
+
+#video{
+
+  source{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    // min-width: 100%;
+    // min-height: 100%;
+  }
+ 
+}
+
 
 .container {
   padding: 0 210px;
@@ -30,7 +49,6 @@ body {
     padding: 0 80px;
   }
 }
-
 
 @media only screen and (max-width: 1200px) {
   .container {
@@ -157,7 +175,7 @@ header {
 .developers {
   width: 100%;
   min-height: 450px;
-  background: #00D7B5;
+  background: $custom_green;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -181,7 +199,7 @@ header {
       }
 
       h2 {
-        font-width: 700;
+        font-weight: 700;
         color: #fff;
         font-size: 40px;
         line-height: 46px;
@@ -200,7 +218,7 @@ header {
       }
 
       p {
-        font-width: 400;
+        font-weight: 400;
         color: #fff;
         font-size: 18px;
         line-height: 24px;
@@ -236,7 +254,7 @@ header {
     button {
       width: 228px;
       height: 55px;
-      background: #00D7B5;
+      background: $custom_green;
       font-weight: 700;
       font-size: 20px;
       line-height: 40px;
@@ -247,11 +265,10 @@ header {
   }
 }
 
-
 .technology {
   width: 100%;
   min-height: 614px;
-  background: #EEEEEE;
+  background: $custom_grey;
   padding: 120px 0 60px;
 
   .container {
@@ -320,7 +337,7 @@ header {
 
   .container {
     h2 {
-      color: #00D7B5;
+      color: $custom_green;
       font-weight: 700;
       font-size: 40px;
       line-height: 46px;
@@ -444,7 +461,7 @@ header {
             font-weight: 500;
             font-size: 18px;
             line-height: 24px;
-            color: #00D7B5;
+            color: $custom_green;
           }
         }
 
@@ -499,8 +516,8 @@ header {
 
         img {
           margin-bottom: 30px;
-          max-width: 314px;
-          max-height: 242px;
+          max-width: 276px;
+          max-height: 264px;
           width: 100%;
           height: 100%;
         }
@@ -526,7 +543,7 @@ header {
             font-weight: 500;
             font-size: 18px;
             line-height: 24px;
-            color: #00D7B5;
+            color: $custom_green;
             @media only screen and (max-width: 600px) {
               text-align: center;
             }
@@ -548,11 +565,10 @@ header {
   }
 }
 
-
 .contact {
   width: 100%;
   min-height: 513px;
-  background: #00D7B5;
+  background: $custom_green;
   padding: 120px 0;
 
   .container {
@@ -574,7 +590,7 @@ header {
       }
 
       h2 {
-        font-width: 700;
+        font-weight: 700;
         font-size: 40px;
         line-height: 46px;
         color: #fff;
@@ -675,7 +691,6 @@ header {
       margin-left: 40px;
 
       .address {
-
         &:last-child {
           margin-left: 30px;
         }
@@ -698,7 +713,6 @@ header {
     }
   }
 }
-
 
 footer {
   display: flex;

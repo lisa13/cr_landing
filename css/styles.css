@@ -15,10 +15,6 @@
   font-family: FiraSans-Thin;
   src: url("../fonts/FiraSansCondensed-Thin.otf") format("opentype"); }
 
-:root {
-  --custom_green: #00d7b5;
-  --custom_grey: #eee; }
-
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +22,20 @@
   outline: none;
   box-sizing: border-box; }
 
-body {
-  font-family: FiraSans-Regular !important;
+html {
   width: 100%; }
+  html body {
+    font-family: FiraSans-Regular !important;
+    width: inherit; }
 
 .main-background {
-  background: url("../images/background.jpg") no-repeat;
-  width: 100%;
   height: 900px; }
+
+#video source {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 600px; }
 
 .container {
   padding: 0 210px;
@@ -140,7 +142,7 @@ header {
 .developers {
   width: 100%;
   min-height: 450px;
-  background: #00D7B5;
+  background: #00d7b5;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -159,7 +161,7 @@ header {
         .developers .container .left-side {
           max-width: 100%; } }
       .developers .container .left-side h2 {
-        font-width: 700;
+        font-weight: 700;
         color: #fff;
         font-size: 40px;
         line-height: 46px; }
@@ -173,7 +175,7 @@ header {
           margin-top: 40px;
           max-width: 100%; } }
       .developers .container .right-side p {
-        font-width: 400;
+        font-weight: 400;
         color: #fff;
         font-size: 18px;
         line-height: 24px; }
@@ -201,7 +203,7 @@ header {
     .developers-community .container button {
       width: 228px;
       height: 55px;
-      background: #00D7B5;
+      background: #00d7b5;
       font-weight: 700;
       font-size: 20px;
       line-height: 40px;
@@ -212,7 +214,7 @@ header {
 .technology {
   width: 100%;
   min-height: 614px;
-  background: #EEEEEE;
+  background: #eee;
   padding: 120px 0 60px; }
   .technology .container h2 {
     color: #000;
@@ -261,7 +263,7 @@ header {
   background: #fff;
   padding: 60px 0 40px; }
   .products .container h2 {
-    color: #00D7B5;
+    color: #00d7b5;
     font-weight: 700;
     font-size: 40px;
     line-height: 46px;
@@ -355,7 +357,7 @@ header {
           font-weight: 500;
           font-size: 18px;
           line-height: 24px;
-          color: #00D7B5; }
+          color: #00d7b5; }
       .team .container .team-container .team-item ul {
         margin-left: 40px; }
         .team .container .team-container .team-item ul li {
@@ -396,8 +398,8 @@ header {
           margin: 0 0 60px; } }
       .team .container .advisory-board-container .advisory-board-item img {
         margin-bottom: 30px;
-        max-width: 314px;
-        max-height: 242px;
+        max-width: 276px;
+        max-height: 264px;
         width: 100%;
         height: 100%; }
       .team .container .advisory-board-container .advisory-board-item .content {
@@ -418,7 +420,7 @@ header {
           font-weight: 500;
           font-size: 18px;
           line-height: 24px;
-          color: #00D7B5; }
+          color: #00d7b5; }
           @media only screen and (max-width: 600px) {
             .team .container .advisory-board-container .advisory-board-item .content .position {
               text-align: center; } }
@@ -435,7 +437,7 @@ header {
 .contact {
   width: 100%;
   min-height: 513px;
-  background: #00D7B5;
+  background: #00d7b5;
   padding: 120px 0; }
   .contact .container {
     display: flex;
@@ -452,7 +454,7 @@ header {
           max-width: 100%;
           margin-bottom: 60px; } }
       .contact .container .left-side h2 {
-        font-width: 700;
+        font-weight: 700;
         font-size: 40px;
         line-height: 46px;
         color: #fff; }
