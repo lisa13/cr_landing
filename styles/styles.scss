@@ -69,13 +69,17 @@ header {
     position: absolute;
     right: 0;
     bottom: 0;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto; z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
     background-size: cover;
   }
 
-  .heading{
+  .heading {
     z-index: 3;
+
     h1 {
       width: 642px;
       font-weight: 500;
@@ -92,11 +96,47 @@ header {
       }
     }
   }
+
+  .horizontal-divider {
+    top: auto;
+    bottom: 20px;
+
+    &.center-align {
+      left: calc(50% - 7.5);
+    }
+
+    .line {
+      background: #fff;
+      height: 30px;
+      width: 4px;
+    }
+
+    .circle {
+      border: 4px solid #fff;
+      width: 15px;
+      height: 15px;
+    }
+
+    &:active {
+      color: #fff;
+    }
+
+    &:focus {
+      color: #fff;
+    }
+
+    .action {
+      color: #fff;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+  }
 }
 
 .container {
   padding: 0 210px;
   width: 100%;
+  position: relative;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -117,6 +157,10 @@ header {
   display: flex;
   align-items: center;
   padding: 120px 0;
+  position: relative;
+
+  .horizontal-divider {
+  }
 
   .container {
     display: flex;
@@ -174,6 +218,17 @@ header {
   flex-wrap: wrap;
   align-items: center;
   padding: 120px 0;
+  position: relative;
+
+  .horizontal-divider {
+    .line {
+      background: #fff;
+    }
+
+    .circle {
+      border: 3px solid #fff;
+    }
+  }
 
   .container {
     display: flex;
@@ -264,6 +319,7 @@ header {
   min-height: 614px;
   background: $custom_grey;
   padding: 120px 0 60px;
+  position: relative;
 
   .container {
     h2 {
@@ -396,6 +452,17 @@ header {
   min-height: 1102px;
   background: #000;
   padding: 120px 0 60px;
+  position: relative;
+
+  .horizontal-divider {
+    .line {
+      background: #fff;
+    }
+
+    .circle {
+      border: 3px solid #fff;
+    }
+  }
 
   .container {
     h2 {
@@ -565,6 +632,18 @@ header {
   background: $custom_green;
   padding: 120px 0;
 
+  position: relative;
+
+  .horizontal-divider {
+    .line {
+      background: #fff;
+    }
+
+    .circle {
+      border: 3px solid #fff;
+    }
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -651,16 +730,37 @@ header {
   min-height: 280px;
   background: #fff;
   padding: 120px 0 60px;
+  position: relative;
+
+  .horizontal-divider.main {
+    display: none;
+
+    @media only screen and (max-width: 600px) {
+      display: flex;
+    }
+  }
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .left-side {
       display: flex;
       min-height: 70px;
       align-items: center;
+
+
+      @media only screen and (max-width: 1000px) {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+      }
 
       img {
         &:first-child {
@@ -679,6 +779,10 @@ header {
         font-size: 20px;
         line-height: 46px;
         color: #000;
+
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
       }
     }
 
@@ -686,9 +790,59 @@ header {
       display: flex;
       margin-left: 40px;
 
+      @media only screen and (max-width: 1000px) {
+        order: 1;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        margin-left: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        margin-left: 0;
+      }
+
+      .email {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 46px;
+        color: #000;
+        margin-bottom: 27px;
+        display: none;
+
+        @media only screen and (max-width: 600px) {
+          display: block;
+        }
+      }
+
       .address {
+        position: relative;
+
+        .horizontal-divider {
+          top: -120px;
+          left: 0;
+
+          @media only screen and (max-width: 600px) {
+            display: none;
+          }
+
+          .line {
+            background: #00D7B5;
+          }
+
+          .circle {
+            border: 3px solid #00D7B5;
+          }
+        }
+
         &:last-child {
           margin-left: 30px;
+
+          @media only screen and (max-width: 600px) {
+            margin-left: 0;
+            margin-top: 40px;
+          }
         }
 
         h4 {
@@ -723,5 +877,62 @@ footer {
     font-size: 16px;
     line-height: 22px;
     color: #989898;
+    text-align: center;
+  }
+}
+
+
+.horizontal-divider {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+
+  .line {
+    width: 3px;
+    height: 80px;
+    background: #000;
+  }
+
+  .circle {
+    width: 13px;
+    height: 13px;
+    background: initial;
+    border-radius: 50%;
+    border: 3px solid #000;
+  }
+
+  &.left-align {
+    left: 210px;
+  }
+
+  &.right-align {
+    right: 210px;
+  }
+
+  &.center-align {
+    left: calc(50% - 6.5px);
+  }
+
+  @media only screen and (max-width: 1440px) {
+    &.left-align {
+      left: 80px;
+    }
+
+    &.right-align {
+      right: 80px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    &.left-align {
+      left: 40px;
+    }
+
+    &.right-align {
+      right: 40px;
+    }
   }
 }

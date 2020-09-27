@@ -91,10 +91,32 @@ header {
           font-size: 45px;
           line-height: 55px;
           width: 275px; } }
+  .main-section .horizontal-divider {
+    top: auto;
+    bottom: 20px; }
+    .main-section .horizontal-divider.center-align {
+      left: calc(50% - 7.5); }
+    .main-section .horizontal-divider .line {
+      background: #fff;
+      height: 30px;
+      width: 4px; }
+    .main-section .horizontal-divider .circle {
+      border: 4px solid #fff;
+      width: 15px;
+      height: 15px; }
+    .main-section .horizontal-divider:active {
+      color: #fff; }
+    .main-section .horizontal-divider:focus {
+      color: #fff; }
+    .main-section .horizontal-divider .action {
+      color: #fff;
+      font-weight: 700;
+      margin-top: 8px; }
 
 .container {
   padding: 0 210px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 @media only screen and (max-width: 1440px) {
   .container {
@@ -109,7 +131,8 @@ header {
   min-height: 450px;
   display: flex;
   align-items: center;
-  padding: 120px 0; }
+  padding: 120px 0;
+  position: relative; }
   .about .container {
     display: flex;
     justify-content: space-between; }
@@ -152,7 +175,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 120px 0; }
+  padding: 120px 0;
+  position: relative; }
+  .developers .horizontal-divider .line {
+    background: #fff; }
+  .developers .horizontal-divider .circle {
+    border: 3px solid #fff; }
   .developers .container {
     display: flex;
     justify-content: space-between; }
@@ -221,7 +249,8 @@ header {
   width: 100%;
   min-height: 614px;
   background: #eee;
-  padding: 120px 0 60px; }
+  padding: 120px 0 60px;
+  position: relative; }
   .technology .container h2 {
     color: #000;
     font-weight: 700;
@@ -317,7 +346,12 @@ header {
   width: 100%;
   min-height: 1102px;
   background: #000;
-  padding: 120px 0 60px; }
+  padding: 120px 0 60px;
+  position: relative; }
+  .team .horizontal-divider .line {
+    background: #fff; }
+  .team .horizontal-divider .circle {
+    border: 3px solid #fff; }
   .team .container h2 {
     color: #fff;
     font-weight: 700;
@@ -444,7 +478,12 @@ header {
   width: 100%;
   min-height: 513px;
   background: #00d7b5;
-  padding: 120px 0; }
+  padding: 120px 0;
+  position: relative; }
+  .contact .horizontal-divider .line {
+    background: #fff; }
+  .contact .horizontal-divider .circle {
+    border: 3px solid #fff; }
   .contact .container {
     display: flex;
     justify-content: space-between;
@@ -507,15 +546,30 @@ header {
   width: 100%;
   min-height: 280px;
   background: #fff;
-  padding: 120px 0 60px; }
+  padding: 120px 0 60px;
+  position: relative; }
+  .contact-info .horizontal-divider.main {
+    display: none; }
+    @media only screen and (max-width: 600px) {
+      .contact-info .horizontal-divider.main {
+        display: flex; } }
   .contact-info .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; }
+    @media only screen and (max-width: 1000px) {
+      .contact-info .container {
+        flex-direction: column;
+        align-items: center; } }
     .contact-info .container .left-side {
       display: flex;
       min-height: 70px;
       align-items: center; }
+      @media only screen and (max-width: 1000px) {
+        .contact-info .container .left-side {
+          order: 2;
+          width: 100%;
+          justify-content: space-between; } }
       .contact-info .container .left-side img:first-child {
         margin-right: 20px;
         width: 165px;
@@ -527,22 +581,62 @@ header {
         font-size: 20px;
         line-height: 46px;
         color: #000; }
+        @media only screen and (max-width: 600px) {
+          .contact-info .container .left-side p {
+            display: none; } }
     .contact-info .container .right-side {
       display: flex;
       margin-left: 40px; }
-      .contact-info .container .right-side .address:last-child {
-        margin-left: 30px; }
-      .contact-info .container .right-side .address h4 {
-        font-weight: 700;
+      @media only screen and (max-width: 1000px) {
+        .contact-info .container .right-side {
+          order: 1;
+          width: 100%;
+          justify-content: space-between;
+          margin-bottom: 60px;
+          margin-left: 0; } }
+      @media only screen and (max-width: 600px) {
+        .contact-info .container .right-side {
+          flex-direction: column;
+          margin-left: 0; } }
+      .contact-info .container .right-side .email {
+        font-weight: 500;
         font-size: 30px;
         line-height: 46px;
         color: #000;
-        margin-bottom: 12px; }
-      .contact-info .container .right-side .address p {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 26px;
-        color: #000; }
+        margin-bottom: 27px;
+        display: none; }
+        @media only screen and (max-width: 600px) {
+          .contact-info .container .right-side .email {
+            display: block; } }
+      .contact-info .container .right-side .address {
+        position: relative; }
+        .contact-info .container .right-side .address .horizontal-divider {
+          top: -120px;
+          left: 0; }
+          @media only screen and (max-width: 600px) {
+            .contact-info .container .right-side .address .horizontal-divider {
+              display: none; } }
+          .contact-info .container .right-side .address .horizontal-divider .line {
+            background: #00D7B5; }
+          .contact-info .container .right-side .address .horizontal-divider .circle {
+            border: 3px solid #00D7B5; }
+        .contact-info .container .right-side .address:last-child {
+          margin-left: 30px; }
+          @media only screen and (max-width: 600px) {
+            .contact-info .container .right-side .address:last-child {
+              margin-left: 0;
+              margin-top: 40px; } }
+        .contact-info .container .right-side .address h4 {
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 46px;
+          color: #000;
+          margin-bottom: 12px; }
+        .contact-info .container .right-side .address p {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #000; }
 
 footer {
   display: flex;
@@ -555,4 +649,39 @@ footer {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: #989898; }
+    color: #989898;
+    text-align: center; }
+
+.horizontal-divider {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0; }
+  .horizontal-divider .line {
+    width: 3px;
+    height: 80px;
+    background: #000; }
+  .horizontal-divider .circle {
+    width: 13px;
+    height: 13px;
+    background: initial;
+    border-radius: 50%;
+    border: 3px solid #000; }
+  .horizontal-divider.left-align {
+    left: 210px; }
+  .horizontal-divider.right-align {
+    right: 210px; }
+  .horizontal-divider.center-align {
+    left: calc(50% - 6.5px); }
+  @media only screen and (max-width: 1440px) {
+    .horizontal-divider.left-align {
+      left: 80px; }
+    .horizontal-divider.right-align {
+      right: 80px; } }
+  @media only screen and (max-width: 1200px) {
+    .horizontal-divider.left-align {
+      left: 40px; }
+    .horizontal-divider.right-align {
+      right: 40px; } }
