@@ -743,7 +743,7 @@ header {
   .horizontal-divider.main {
     display: none;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 800px) {
       display: flex;
     }
   }
@@ -753,7 +753,7 @@ header {
     justify-content: space-between;
     align-items: flex-end;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1400px) {
       flex-direction: column;
       align-items: center;
     }
@@ -764,7 +764,7 @@ header {
       align-items: center;
 
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: 1400px) {
         order: 2;
         width: 100%;
         justify-content: space-between;
@@ -787,8 +787,9 @@ header {
         font-size: 20px;
         line-height: 46px;
         color: #000;
+        min-width: 185px;
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 800px) {
           display: none;
         }
       }
@@ -798,7 +799,7 @@ header {
       display: flex;
       margin-left: 40px;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: 1400px) {
         order: 1;
         width: 100%;
         justify-content: space-between;
@@ -806,7 +807,7 @@ header {
         margin-left: 0;
       }
 
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 800px) {
         flex-direction: column;
         margin-left: 0;
       }
@@ -819,7 +820,7 @@ header {
         margin-bottom: 27px;
         display: none;
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 800px) {
           display: block;
         }
       }
@@ -831,7 +832,7 @@ header {
           top: -120px;
           left: 0;
 
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 800px) {
             display: none;
           }
 
@@ -844,10 +845,10 @@ header {
           }
         }
 
-        &:last-child {
+        &:not(:first-child) {
           margin-left: 30px;
 
-          @media only screen and (max-width: 600px) {
+          @media only screen and (max-width: 800px) {
             margin-left: 0;
             margin-top: 40px;
           }
