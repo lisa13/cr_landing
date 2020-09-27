@@ -1,0 +1,31 @@
+{
+  "name": "cr_landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "supervisor server.js",
+    "build:watch": "watch 'gulp sass' ./styles/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisa13/cr_landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisa13/cr_landing/issues"
+  },
+  "homepage": "https://github.com/lisa13/cr_landing#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0",
+    "watch": "^1.0.2"
+  }
+}
