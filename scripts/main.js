@@ -34,6 +34,19 @@ $(document).ready(function () {
     $('nav a').click(function (event) {
         scrollTo(linkKeys[event.target.className], 55);
     });
+
+    $(window).scroll(function () {
+        const containerHeight = window.innerHeight;
+        const scrollPosition = window.scrollY + 55;
+
+        if(scrollPosition > containerHeight) {
+            $("header").removeClass("black-header");
+            $("header").addClass("white-header");
+        } else {
+            $("header").removeClass("white-header");
+            $("header").addClass("black-header");
+        }
+    });
 });
 
 function scrollTo(selector, value) {

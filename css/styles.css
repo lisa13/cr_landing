@@ -31,6 +31,9 @@ html {
     font-family: FiraSans-Regular !important;
     width: inherit; }
 
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0; }
+
 header {
   position: fixed;
   width: 100%;
@@ -38,9 +41,22 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.22);
-  height: 55px;
-  background: #fff; }
+  height: 55px; }
+  header img {
+    display: none; }
+  header.white-header {
+    background: #fff;
+    box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.22); }
+    header.white-header .logo .black {
+      display: block; }
+    header.white-header nav a {
+      color: #000; }
+  header.black-header {
+    background: transparent; }
+    header.black-header .logo .white {
+      display: block; }
+    header.black-header nav a {
+      color: #fff; }
   @media only screen and (max-width: 960px) {
     header {
       justify-content: center; } }

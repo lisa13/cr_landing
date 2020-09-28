@@ -22,6 +22,10 @@ html {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -29,9 +33,44 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  box-shadow: 0 5px 4px -3px rgba(0, 0, 0, .22);
   height: 55px;
-  background: #fff;
+
+  img {
+    display: none;
+  }
+
+  &.white-header {
+    background: #fff;
+    box-shadow: 0 5px 4px -3px rgba(0, 0, 0, .22);
+
+    .logo {
+      .black {
+        display: block;
+      }
+    }
+
+    nav {
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  &.black-header {
+    background: transparent;
+
+    .logo {
+      .white {
+        display: block;
+      }
+    }
+
+    nav {
+      a {
+        color: #fff;
+      }
+    }
+  }
 
   @media only screen and (max-width: 960px) {
     justify-content: center;
