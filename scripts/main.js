@@ -35,11 +35,33 @@ $(document).ready(function () {
         scrollTo(linkKeys[event.target.className], 55);
     });
 
+    $("#contact-button").click(function () {
+        const data = {
+            name: $("#contact-name")[0].value,
+            email: $("#contact-email")[0].value,
+            company: $("#contact-company")[0].value
+        };
+
+        console.log(data);
+
+        if (data.name && data.email && data.company) {
+            $.ajax({
+                type: "POST",
+                url: "/contact",
+                data: data,
+                success: function (res) {
+                    console.log(res);
+                },
+                dataType: "json"
+            });
+        }
+    });
+
     $(window).scroll(function () {
         const containerHeight = window.innerHeight;
         const scrollPosition = window.scrollY + 55;
 
-        if(scrollPosition > containerHeight) {
+        if (scrollPosition > containerHeight) {
             $("header").removeClass("black-header");
             $("header").addClass("white-header");
         } else {
