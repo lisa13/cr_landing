@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CR</title>
+    <title>Chain Reaction</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/ico" href="./icons/crblock.ico"/>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 </head>
 
 <body>
 
 <header>
     <a class="logo" href="#main-section">
-        <img src="./icons/CR_LOGO_white.svg" alt="">
+        <img src="./icons/CR_LOGO_black.svg" alt="">
     </a>
     <nav>
-        <a href="#about">About</a>
-        <a href="#developers">Developers</a>
-        <a href="#technology">Technology</a>
-        <a href="#products">Products</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+        <a class="about-link">About</a>
+        <a class="developers-link">Developers</a>
+        <a class="technology-link">Technology</a>
+        <a class="products-link">Products</a>
+        <a class="team-link">Team</a>
+        <a class="contact-link">Contact</a>
     </nav>
 </header>
 
@@ -57,10 +57,10 @@
                 cryptography forever - no more fragile, no more confined by the boundaries of scale and performance.
             </p>
         </div>
-    </div>
-    <div class="horizontal-divider left-align">
-        <div class="line"></div>
-        <div class="circle"></div>
+        <div class="horizontal-divider left-align">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
     </div>
 </section>
 
@@ -81,10 +81,10 @@
                 related ones and others seamlessly - be it on an FPGA or dedicated ASIC making your sophisticated
                 development simple, coherent and consistent.</p>
         </div>
-    </div>
-    <div class="horizontal-divider left-align">
-        <div class="line"></div>
-        <div class="circle"></div>
+        <div class="horizontal-divider left-align">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
     </div>
 </section>
 
@@ -122,14 +122,18 @@
                 <p>Parallel architecture solves computing bottlenecks and enables scalability</p>
             </div>
         </div>
-    </div>
-    <div class="horizontal-divider center-align">
-        <div class="line"></div>
-        <div class="circle"></div>
+        <div class="horizontal-divider center-align">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
     </div>
 </section>
 
 <section id="products" class="products">
+    <div class="vertical-divider left-align">
+        <div class="line"></div>
+        <div class="circle"></div>
+    </div>
     <div class="container">
         <h2>Products</h2>
         <div class="products-container">
@@ -150,6 +154,10 @@
                 </p>
             </div>
         </div>
+    </div>
+    <div class="vertical-divider right-align">
+        <div class="circle"></div>
+        <div class="line"></div>
     </div>
 </section>
 
@@ -203,6 +211,11 @@
                 </ul>
             </div>
         </div>
+
+        <div class="horizontal-divider center-align">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
     </div>
 
     <div class="container">
@@ -229,11 +242,6 @@
             </div>
         </div>
     </div>
-
-    <div class="horizontal-divider center-align">
-        <div class="line"></div>
-        <div class="circle"></div>
-    </div>
 </section>
 
 <section id="contact" class="contact">
@@ -258,11 +266,10 @@
                 </div>
             </form>
         </div>
-    </div>
-
-    <div class="horizontal-divider left-align">
-        <div class="line"></div>
-        <div class="circle"></div>
+        <div class="horizontal-divider left-align">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
     </div>
 </section>
 
@@ -273,7 +280,7 @@
                 <img src="./icons/CR_LOGO_black.svg" alt="">
             </a>
             <p>info@chain-reaction.io</p>
-            <img src="./icons/linkedin.svg" alt="">
+            <img class="linkedin-icon" src="./icons/linkedin.svg" alt="">
         </div>
 
 
@@ -308,20 +315,23 @@
                 <h4>Israel</h4>
                 <p>1 Ha-Tsmikha St. Yokneam Ind Zone</p>
                 <p>Si-Soft Research Center, 1B5-7</p>
-                <p>Yokneam, Zip 2069204, Israel</p>
+                <p>Yokneam, 2069204</p>
             </div>
         </div>
-    </div>
 
-    <div class="horizontal-divider main left-align">
-        <div class="line"></div>
-        <div class="circle"></div>
+        <div class="horizontal-divider main left-align">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
     </div>
 </section>
 
 <footer>
     <p>Copyright © 2020 Chain Reaction. All rights reserved.</p>
 </footer>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./scripts/main.js"></script>
 </body>
 
 </html>

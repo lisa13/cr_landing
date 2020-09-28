@@ -37,9 +37,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
-  background: rgba(0, 0, 0, 0.8);
-  height: 70px; }
+  z-index: 10;
+  box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.22);
+  height: 55px;
+  background: #fff; }
+  @media only screen and (max-width: 960px) {
+    header {
+      justify-content: center; } }
   header .logo {
     margin-left: 40px;
     width: 100px;
@@ -57,7 +61,7 @@ header {
         display: none; } }
     header nav a {
       margin-left: 30px;
-      color: #fff;
+      color: #000;
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
@@ -70,6 +74,10 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh; }
+  @media only screen and (max-width: 960px) {
+    .main-section {
+      background: url("../images/CR_Tokyo.jpg") no-repeat;
+      background-size: cover; } }
   .main-section #video {
     position: absolute;
     right: 0;
@@ -80,6 +88,9 @@ header {
     height: auto;
     z-index: -100;
     background-size: cover; }
+    @media only screen and (max-width: 960px) {
+      .main-section #video {
+        display: none; } }
   .main-section .heading {
     z-index: 3; }
     .main-section .heading h1 {
@@ -118,25 +129,24 @@ header {
       margin-top: 8px; }
 
 .container {
-  padding: 0 210px;
+  max-width: 1300px;
   width: 100%;
-  position: relative; }
-
-@media only screen and (max-width: 1440px) {
-  .container {
-    padding: 0 80px; } }
-
-@media only screen and (max-width: 1200px) {
-  .container {
-    padding: 0 40px; } }
+  position: relative;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 1380px) {
+    .container {
+      margin: 0 40px;
+      width: calc(100% - 80px); } }
 
 .about {
   width: 100%;
-  min-height: 450px;
   display: flex;
   align-items: center;
   padding: 120px 0;
-  position: relative; }
+  position: relative;
+  justify-content: center; }
+  .about .horizontal-divider {
+    top: -120px; }
   .about .container {
     display: flex;
     justify-content: space-between; }
@@ -174,17 +184,19 @@ header {
 
 .developers {
   width: 100%;
-  min-height: 450px;
   background: #00d7b5;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 120px 0;
-  position: relative; }
-  .developers .horizontal-divider .line {
-    background: #fff; }
-  .developers .horizontal-divider .circle {
-    border: 3px solid #fff; }
+  position: relative;
+  justify-content: center; }
+  .developers .horizontal-divider {
+    top: -120px; }
+    .developers .horizontal-divider .line {
+      background: #fff; }
+    .developers .horizontal-divider .circle {
+      border: 3px solid #fff; }
   .developers .container {
     display: flex;
     justify-content: space-between; }
@@ -254,10 +266,13 @@ header {
 
 .technology {
   width: 100%;
-  min-height: 614px;
   background: #eee;
   padding: 120px 0 60px;
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: center; }
+  .technology .horizontal-divider {
+    top: -120px; }
   .technology .container h2 {
     color: #000;
     font-weight: 700;
@@ -303,7 +318,11 @@ header {
   width: 100%;
   min-height: 614px;
   background: #fff;
-  padding: 60px 0 40px; }
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative; }
   .products .container h2 {
     color: #00d7b5;
     font-weight: 700;
@@ -333,8 +352,8 @@ header {
           margin: 0 0 60px; } }
       .products .container .products-container .product-item img {
         margin-bottom: 30px;
-        max-width: 314px;
-        max-height: 242px;
+        max-width: 400px;
+        max-height: 266px;
         width: 100%;
         height: 100%; }
       .products .container .products-container .product-item h3 {
@@ -351,14 +370,19 @@ header {
 
 .team {
   width: 100%;
-  min-height: 1102px;
   background: #000;
   padding: 120px 0 60px;
-  position: relative; }
-  .team .horizontal-divider .line {
-    background: #fff; }
-  .team .horizontal-divider .circle {
-    border: 3px solid #fff; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .team .horizontal-divider {
+    top: -120px; }
+    .team .horizontal-divider .line {
+      background: #fff; }
+    .team .horizontal-divider .circle {
+      border: 3px solid #fff; }
   .team .container h2 {
     color: #fff;
     font-weight: 700;
@@ -387,7 +411,7 @@ header {
           width: 100%;
           margin: 0 0 60px; } }
       .team .container .team-container .team-item img {
-        margin-bottom: 38px;
+        margin-bottom: 20px;
         max-width: 158px;
         max-height: 170px;
         width: 100%;
@@ -444,7 +468,7 @@ header {
           align-items: center;
           margin: 0 0 60px; } }
       .team .container .advisory-board-container .advisory-board-item img {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         max-width: 158px;
         max-height: 170px;
         width: 100%;
@@ -483,14 +507,17 @@ header {
 
 .contact {
   width: 100%;
-  min-height: 513px;
   background: #00d7b5;
   padding: 120px 0;
+  display: flex;
+  justify-content: center;
   position: relative; }
-  .contact .horizontal-divider .line {
-    background: #fff; }
-  .contact .horizontal-divider .circle {
-    border: 3px solid #fff; }
+  .contact .horizontal-divider {
+    top: -120px; }
+    .contact .horizontal-divider .line {
+      background: #fff; }
+    .contact .horizontal-divider .circle {
+      border: 3px solid #fff; }
   .contact .container {
     display: flex;
     justify-content: space-between;
@@ -556,7 +583,8 @@ header {
   padding: 120px 0 60px;
   position: relative; }
   .contact-info .horizontal-divider.main {
-    display: none; }
+    display: none;
+    top: -120px; }
     @media only screen and (max-width: 800px) {
       .contact-info .horizontal-divider.main {
         display: flex; } }
@@ -577,11 +605,11 @@ header {
           order: 2;
           width: 100%;
           justify-content: space-between; } }
-      .contact-info .container .left-side img:first-child {
+      .contact-info .container .left-side .logo img {
         margin-right: 20px;
         width: 165px;
         height: 70px; }
-      .contact-info .container .left-side img:last-child {
+      .contact-info .container .left-side .linkedin-icon {
         margin-left: 20px; }
       .contact-info .container .left-side p {
         font-weight: 500;
@@ -607,7 +635,7 @@ header {
           flex-direction: column;
           margin-left: 0; } }
       .contact-info .container .right-side .email {
-        font-weight: 500;
+        font-weight: 700;
         font-size: 30px;
         line-height: 46px;
         color: #000;
@@ -666,7 +694,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 0; }
+  top: 0;
+  animation-duration: 3s; }
   .horizontal-divider .line {
     width: 3px;
     height: 80px;
@@ -678,18 +707,33 @@ footer {
     border-radius: 50%;
     border: 3px solid #000; }
   .horizontal-divider.left-align {
-    left: 210px; }
+    left: 0; }
   .horizontal-divider.right-align {
-    right: 210px; }
+    right: 0; }
   .horizontal-divider.center-align {
     left: calc(50% - 6.5px); }
-  @media only screen and (max-width: 1440px) {
-    .horizontal-divider.left-align {
-      left: 80px; }
-    .horizontal-divider.right-align {
-      right: 80px; } }
-  @media only screen and (max-width: 1200px) {
-    .horizontal-divider.left-align {
-      left: 40px; }
-    .horizontal-divider.right-align {
-      right: 40px; } }
+
+.vertical-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  width: 200px;
+  top: 190px; }
+  @media only screen and (max-width: 1450px) {
+    .vertical-divider {
+      display: none; } }
+  .vertical-divider.left-align {
+    left: 0; }
+  .vertical-divider.right-align {
+    right: 0; }
+  .vertical-divider .line {
+    height: 3px;
+    background: #eee;
+    width: calc(100% - 13px); }
+  .vertical-divider .circle {
+    width: 13px;
+    height: 13px;
+    background: initial;
+    border-radius: 50%;
+    border: 3px solid #eee; }
