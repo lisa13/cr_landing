@@ -581,7 +581,9 @@ header {
   min-height: 280px;
   background: #fff;
   padding: 120px 0 60px;
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: center; }
   .contact-info .horizontal-divider.main {
     display: none;
     top: -120px; }
