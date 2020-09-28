@@ -663,6 +663,10 @@ header {
         @media only screen and (max-width: 800px) {
           .contact-info .container .right-side .email {
             display: block; } }
+        @media only screen and (max-width: 500px) {
+          .contact-info .container .right-side .email {
+            font-size: 26px;
+            line-height: 36px; } }
       .contact-info .container .right-side .address {
         position: relative; }
         .contact-info .container .right-side .address .horizontal-divider {
