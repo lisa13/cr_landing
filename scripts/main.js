@@ -14,7 +14,8 @@ const sectionKeys = [
     "#technology",
     "#products",
     "#team",
-    "#contact"
+    "#contact",
+    "#contact-info"
 ];
 
 function isOnScreen(element) {
@@ -30,6 +31,7 @@ function isOnScreen(element) {
 
 $(document).ready(function () {
     scrollTo("#main-section", 0);
+    checkSectionIsVisible();
 
     $('nav a').click(function (event) {
         scrollTo(linkKeys[event.target.className], 55);
@@ -58,6 +60,7 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
+        checkSectionIsVisible();
         const containerHeight = window.innerHeight;
         const scrollPosition = window.scrollY + 55;
 
@@ -75,4 +78,24 @@ function scrollTo(selector, value) {
     $([document.documentElement, document.body]).animate({
         scrollTop: $(selector).offset().top - value
     }, 0);
+}
+
+function checkSectionIsVisible() {
+    sectionKeys.forEach((selector) => {
+        let top_of_element = $(selector).offset().top;
+        let bottom_of_element = $(selector).offset().top + $(selector).outerHeight();
+        let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+        let top_of_screen = $(window).scrollTop();
+
+        if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+            $(`${selector} .horizontal-divider`).removeClass("animate__backInDown");
+            $(`${selector} .horizontal-divider`).addClass("animate__backInDown");
+
+            $(`${selector} .vertical-divider.left-align`).removeClass("animate__backInLeft");
+            $(`${selector} .vertical-divider.left-align`).addClass("animate__backInLeft");
+
+            $(`${selector} .vertical-divider.right-align`).removeClass("animate__backOutRight");
+            $(`${selector} .vertical-divider.right-align`).addClass("animate__backOutRight");
+        }
+    });
 }

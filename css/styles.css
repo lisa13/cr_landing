@@ -721,7 +721,6 @@ footer {
   align-items: center;
   justify-content: center;
   top: 0;
-  animation: backInDown;
   animation-duration: 2s; }
   .horizontal-divider .line {
     width: 3px;
@@ -746,7 +745,8 @@ footer {
   align-items: center;
   flex: 1 1;
   width: 200px;
-  top: 190px; }
+  top: 190px;
+  animation-duration: 2s; }
   @media only screen and (max-width: 1450px) {
     .vertical-divider {
       display: none; } }
