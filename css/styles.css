@@ -93,11 +93,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; }
-  @media only screen and (max-width: 960px) {
-    .main-section {
-      background: url("../images/CR_Tokyo.jpg") no-repeat;
-      background-size: cover; } }
+  height: 100vh;
+  background: url("../images/CR_Tokyo.jpg") no-repeat;
+  background-size: cover;
+  z-index: -101; }
   .main-section #video {
     position: absolute;
     right: 0;
@@ -107,10 +106,11 @@ header {
     width: auto;
     height: auto;
     z-index: -100;
-    background-size: cover; }
+    background-size: cover;
+    display: none; }
     @media only screen and (max-width: 960px) {
       .main-section #video {
-        display: none; } }
+        display: none !important; } }
   .main-section .heading {
     z-index: 3; }
     .main-section .heading h1 {

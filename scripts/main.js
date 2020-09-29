@@ -30,6 +30,10 @@ function isOnScreen(element) {
 }
 
 $(document).ready(function () {
+    setTimeout(() => {
+        $("#video").css({display: "block"});
+    }, 3000);
+
     scrollTo("#main-section", 0);
     checkSectionIsVisible();
 
