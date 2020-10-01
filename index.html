@@ -251,16 +251,21 @@
             <h2>Contact us for more details</h2>
         </div>
         <div class="right-side">
-            <form>
+            <form novalidate>
                 <div class="form-field">
                     <input id="contact-name" name="name" type="text" placeholder="Name">
+                    <div class="error-message name-error-message"></div>
                 </div>
                 <div class="form-field">
                     <input id="contact-email" name="email" type="email" placeholder="Email">
+                    <div class="error-message email-error-message"></div>
                 </div>
                 <div class="form-field">
                     <input id="contact-company" name="company" type="text" placeholder="Company">
+                    <div class="error-message company-error-message"></div>
                 </div>
+
+                <div class="success-message">Email successfully sent</div>
 
                 <div class="submit">
                     <button id="contact-button" type="button">SEND</button>

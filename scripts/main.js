@@ -18,17 +18,6 @@ const sectionKeys = [
     "#contact-info"
 ];
 
-function isOnScreen(element) {
-    let position = element.getBoundingClientRect();
-
-    // checking whether fully visible
-    if (position.top >= 0 && position.bottom <= window.innerHeight) {
-        return true
-    } else {
-        return false;
-    }
-}
-
 $(document).ready(function () {
     setTimeout(() => {
         $("#video").css({display: "block"});
@@ -38,7 +27,7 @@ $(document).ready(function () {
     checkSectionIsVisible();
 
     $('nav a').click(function (event) {
-        scrollTo(linkKeys[event.target.className], 55);
+        scrollTo(linkKeys[event.target.className], 62);
     });
 
     $("#contact-button").click(function () {
@@ -47,26 +36,39 @@ $(document).ready(function () {
             email: $("#contact-email")[0].value,
             company: $("#contact-company")[0].value
         };
-
-        console.log(data);
+        $(".success-message").hide();
 
         if (data.name && data.email && data.company) {
+            validateEmail();
+            validateCompany();
+            validateName();
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            if (!re.test(String(data.email).toLowerCase())) {
+                return;
+            }
             $.ajax({
                 type: "POST",
                 url: "/contact",
                 data: data,
                 success: function (res) {
                     console.log(res);
+                    resetContactForm();
+                    $(".success-message").show();
                 },
                 dataType: "json"
             });
+        } else {
+            validateEmail();
+            validateCompany();
+            validateName();
         }
     });
 
     $(window).scroll(function () {
         checkSectionIsVisible();
         const containerHeight = window.innerHeight;
-        const scrollPosition = window.scrollY + 55;
+        const scrollPosition = window.scrollY + 73;
 
         if (scrollPosition > containerHeight) {
             $("header").removeClass("black-header");
@@ -102,4 +104,58 @@ function checkSectionIsVisible() {
             $(`${selector} .vertical-divider.right-align`).addClass("animate__backOutRight");
         }
     });
+}
+
+
+function validateEmail() {
+    const emailInput = $("#contact-email")[0];
+    const email = emailInput.value;
+    const container = $(".email-error-message");
+
+    if (!email) {
+        container.html("Email is required");
+        return;
+    }
+
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (!re.test(String(email).toLowerCase())) {
+        container.html("Email is invalid");
+        return;
+    }
+
+    container.html("");
+}
+
+function validateName() {
+    const nameInput = $("#contact-name")[0];
+    const name = nameInput.value;
+    const container = $(".name-error-message");
+
+    if (!name) {
+        container.html("Name is required");
+        return;
+    }
+
+    container.html("");
+}
+
+function validateCompany() {
+    const companyInput = $("#contact-company")[0];
+    const company = companyInput.value;
+    const container = $(".company-error-message");
+    console.log(company);
+
+    if (!company) {
+        container.html("Company is required");
+        return;
+    }
+
+    container.html("");
+}
+
+function resetContactForm() {
+    $("#contact-email").val("");
+    $("#contact-name").val("");
+    $("#contact-company").val("");
 }
