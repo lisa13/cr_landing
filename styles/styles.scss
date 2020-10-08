@@ -120,7 +120,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("../images/CR_Tokyo.jpg") no-repeat;
+  //background: url("../images/CR_Tokyo.jpg") no-repeat;
   background-size: cover;
   z-index: -101;
 
@@ -134,7 +134,7 @@ header {
     height: auto;
     z-index: -100;
     background-size: cover;
-    display: none;
+    //display: none;
 
     @media only screen and (max-width: 960px) {
       display: none !important;

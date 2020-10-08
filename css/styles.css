@@ -95,7 +95,6 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("../images/CR_Tokyo.jpg") no-repeat;
   background-size: cover;
   z-index: -101; }
   .main-section #video {
@@ -107,8 +106,7 @@ header {
     width: auto;
     height: auto;
     z-index: -100;
-    background-size: cover;
-    display: none; }
+    background-size: cover; }
     @media only screen and (max-width: 960px) {
       .main-section #video {
         display: none !important; } }
