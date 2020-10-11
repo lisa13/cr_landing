@@ -95,6 +95,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: url("../images/CR_Tokyo.jpg") no-repeat;
   background-size: cover;
   z-index: -101; }
   .main-section #video {
@@ -620,6 +621,7 @@ header {
     .contact-info .container .left-side {
       display: flex;
       min-height: 70px;
+      margin-bottom: 32px;
       align-items: center; }
       @media only screen and (max-width: 1400px) {
         .contact-info .container .left-side {

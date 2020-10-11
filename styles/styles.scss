@@ -1,5 +1,27 @@
-@import "fonts";
+//@import "fonts";
 @import "variables";
+
+@font-face {
+  font-family: FiraSans-Bold;
+  font-weight: bold;
+  src: url("../fonts/FiraSansCondensed-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: FiraSans-Regular;
+  src: url("../fonts/FiraSansCondensed-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: FiraSans-Medium;
+  src: url("../fonts/FiraSansCondensed-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: FiraSans-Thin;
+  src: url("../fonts/FiraSansCondensed-Thin.otf") format("opentype");
+}
+
 
 * {
   margin: 0;
@@ -836,6 +858,7 @@ header {
     .left-side {
       display: flex;
       min-height: 70px;
+      margin-bottom: 32px;
       align-items: center;
 
 
